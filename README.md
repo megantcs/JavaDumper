@@ -17,7 +17,9 @@ Download the latest JavaDumper.dll release from the distribution channel.
 Inject the DLL into the target Java process using your preferred injection method.
 
 ### Step 3: Execute Dump Command
+```bash
 curl.exe --http0.9 -X POST http://localhost:2716 -d "/dci --header ?ux ?iof of=OUTPUT_FILE.txt"
+```
 
 Upon successful execution, the output file containing all class definitions will be generated in the process working directory.
 
@@ -32,7 +34,9 @@ Upon successful execution, the output file containing all class definitions will
 1. Clone repository
 2. Open command prompt in project directory  
 3. Execute build command:
+```bash
 msbuild .\Server.vcxproj
+```
 
 ## Project Status
 Current implementation represents a functional prototype providing core dumping capabilities. Future development will focus on enhanced filtering, performance optimization, and expanded JVM support.
