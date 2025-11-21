@@ -33,7 +33,6 @@ curl.exe --http0.9 -X POST http://localhost:2716 -d "/stop"
 - Microsoft Visual Studio 2022
 - Windows SDK
 
-### Compilation Process
 1. Clone repository
 2. Open command prompt in project directory  
 3. Execute build command:
