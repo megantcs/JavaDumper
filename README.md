@@ -1,7 +1,7 @@
 # JavaDumper
 
 ## Overview
-JavaDumper is a professional instrumentation tool designed for extracting class information from active Java processes via JVMTI. The tool provides HTTP-based remote control interface for runtime class analysis and export capabilities.
+JavaDumper is a utility for retrieving information about loaded classes in running Java processes using JVMTI. The tool provides an HTTP interface for remote management and export of class data.
 
 ## System Requirements
 - Windows OS (7+)
