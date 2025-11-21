@@ -39,7 +39,7 @@ msbuild .\JavaDumper.sln
 ```
 
 ## Project Status
-Current implementation represents a functional prototype providing core dumping capabilities. Future development will focus on enhanced filtering, performance optimization, and expanded JVM support.
+The current implementation is a functional prototype that provides core reset capabilities. Future developments will focus on improved filtering, performance optimization, and enhanced JVM support. Current goals include creating a client for more convenient interaction with the server, as it is currently done through curl.
 
 ## Legal Notice
 This tool is intended for educational purposes, debugging, and security research. Users are responsible for complying with applicable laws and software licenses.
