@@ -24,6 +24,11 @@ struct CommandDci : CommandExecute
 
 	void Execute(SOCKET user, REF(string) full_line, REF(vector<string>) arguments) override
 	{
+		// пока хард кодом, потом добавлю main thread
+		// и это будет выполняться в нем
+		if (jni.env == nullptr)
+			jni.attachContainer();
+
 		JNIDumperStruct dumper(jni);
 		bool header = string_utils::HasArgument(arguments, "--header");
 
@@ -34,6 +39,8 @@ struct CommandDci : CommandExecute
 			string_utils::HasArgument(arguments, "--lambda_ignore"),
 			string_utils::ParseArgumentsValues(arguments, "/gg", ':'));
 
+
+		Logger::Debug("Founded class: " + ToStr(classes.size()));
 		server.Server()->OutputString(user, GetHeaderClassses(classes));
 	}
 };
@@ -61,7 +68,7 @@ struct CommandVersion : CommandExecute
 		}
 
 		/* send pH */
-		server.Server()->OutputString(user, Str3(pH.name, " ,", pH.version));
+		server.Server()->OutputString(user, Str3(pH.name, ", ", pH.version));
 	}
 };
 
@@ -71,8 +78,6 @@ void main()
 	// init pH
 	pH = {"jd server", "1.0.0", 2716};
 	
-	jni.attachContainer();
-
 	// auto free library +server.stop
 	signal(SIGINT, [](int signal)
 	{

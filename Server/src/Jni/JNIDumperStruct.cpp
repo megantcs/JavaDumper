@@ -6,6 +6,7 @@
 
 #include <regex>
 #include <set>
+#include "../Header/Logger.h"
 
 JNIDumperStruct::JNIDumperStruct(const JNIContainer &container)
     : jni(container)
@@ -78,10 +79,18 @@ std::vector<JNIDumperStruct::ClassInfo> JNIDumperStruct::GetAllClassInfo(bool du
 {
     std::vector<JNIDumperStruct::ClassInfo> buff;
     jclass* classes;
-    jint count;
-
-    jni.jvmti->GetLoadedClasses(&count, &classes);
-
+    jint count = 0;
+    jvmtiError error = jni.jvmti->GetLoadedClasses(&count, &classes);
+    
+    // мб потом руки дойдут
+    // более адекватно сделаю
+    if (error != JVMTI_ERROR_NONE) {
+        if (error == JVMTI_ERROR_UNATTACHED_THREAD) jni.attachContainer();
+        else {
+            Logger::Error("Jvmti error: " + std::to_string(error));
+            return {};
+        }
+    }
     for (jint i = 0; i < count; i++)
     {
         char* signature_ptr;
