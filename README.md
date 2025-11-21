@@ -35,7 +35,7 @@ Upon successful execution, the output file containing all class definitions will
 2. Open command prompt in project directory  
 3. Execute build command:
 ```bash
-msbuild .\Server.vcxproj
+msbuild .\JavaDumper.sln
 ```
 
 ## Project Status
