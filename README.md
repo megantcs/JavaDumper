@@ -4,9 +4,8 @@
 JavaDumper is a utility for retrieving information about loaded classes in running Java processes using JVMTI. The tool provides an HTTP interface for remote management and export of class data.
 
 ## System Requirements
-- Windows OS (7+)
+- Windows OS (10+)
 - Java 8+ Runtime Environment  
-- Target Java process with JVMTI support
 
 ## Installation & Usage
 
@@ -26,9 +25,8 @@ Upon successful execution, the output file containing all class definitions will
 ## Build Instructions
 
 ### Prerequisites
-- Microsoft Visual Studio 2019 or later
+- Microsoft Visual Studio 2022
 - Windows SDK
-- C++ build tools
 
 ### Compilation Process
 1. Clone repository
