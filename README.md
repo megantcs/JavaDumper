@@ -9,11 +9,11 @@ JavaDumper is a utility for retrieving information about loaded classes in runni
 
 ## Installation & Usage
 
-### Step 1: Acquire Binary
-Download the latest JavaDumper.dll release from the distribution channel.
+### Step 1: Download Binary
+Download the latest JavaDumper.dll 
 
 ### Step 2: Process Injection
-Inject the DLL into the target Java process using your preferred injection method.
+Inject the DLL into the target Java process using your preferred injection method. (Process Hacker, System Informer, other injectors.)
 
 ### Step 3: Execute Dump Command
 ```bash
