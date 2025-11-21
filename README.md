@@ -1,7 +1,8 @@
 # JavaDumper
 
 ## Overview
-JavaDumper is a utility for retrieving information about loaded classes in running Java processes using JVMTI. The tool provides an HTTP interface for remote management and export of class data. [📚 See](wiki/)
+JavaDumper is a utility for retrieving information about loaded classes in running Java processes using JVMTI. The tool provides an HTTP interface for remote management and export of class data. 
+[📚 Wiki](https://github.com/megantcs/JavaDumper/wiki)
 
 ## System Requirements
 - Windows OS (10+)
