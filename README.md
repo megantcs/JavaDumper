@@ -22,6 +22,10 @@ curl.exe --http0.9 -X POST http://localhost:2716 -d "/dci --header ?ux ?iof of=O
 
 Upon successful execution, the output file containing all class definitions will be generated in the process working directory.
 
+### shutdown the server:
+```bash
+curl.exe --http0.9 -X POST http://localhost:2716 -d "/stop"
+```
 ## Build Instructions
 
 ### Prerequisites
